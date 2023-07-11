@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delta</title> 
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="assets/materialize/css/materialize.min.css" media="screen,projection" />
+    <!-- Bootstrap Styles-->
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <!-- FontAwesome Styles-->
+    <link href="assets/css/font-awesome.css" rel="stylesheet" />
+    <!-- Morris Chart Styles-->
+    <link href="assets/js/morris/morris-0.4.3.min.css" rel="stylesheet" />
+    <!-- Custom Styles-->
+    <link href="assets/css/custom-styles.css" rel="stylesheet" />
+    <!-- Google Fonts-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" href="assets/js/Lightweight-Chart/cssCharts.css"> 
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+    <script src="bootstrap/jquery.js"></script>
+    <script src="bootstrap/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+    <div id="wrapper">
+        <nav class="navbar navbar-default top-navbar" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle waves-effect waves-dark" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand waves-effect waves-dark" href="index.html"><img src="https://i.ibb.co/F7TxwKz/imgpsh-fullsize-anim.png" alt="imgpsh-fullsize-anim" border="0"></a>
+			    <div id="sideNav" href=""><i class="material-icons dp48">toc</i></div>
+            </div>
+            <ul class="nav navbar-top-links navbar-right"> 
+				<li><a class="dropdown-button waves-effect waves-dark" href="#!" data-activates="dropdown1"><i class="fa fa-user fa-fw"></i> <b>Delta</b> <i class="material-icons right">arrow_drop_down</i></a></li>
+            </ul>
+        </nav>
+		<!-- Dropdown Structure -->
+		<ul id="dropdown1" class="dropdown-content">
+			<li><a href="#"><i class="fa fa-user fa-fw"></i> My Profile</a></li>
+			<li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a></li> 
+			<li><a href="#"><i class="fa fa-sign-out fa-fw"></i> Login</a></li>
+		</ul>
+	   <!--/. NAV TOP  -->
+        <nav class="navbar-default navbar-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="main-menu">
+					<li>
+                        <a class="waves-effect waves-dark" href="index.html"><i class="fa fa-dashboard"></i> Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="server.html" class="waves-effect waves-dark"><i class="fa fa-desktop"></i>Server Configuration</a>
+                    </li>
+					<li>
+                        <a href="#" class="waves-effect waves-dark"><i class="fa fa-bar-chart-o"></i>Source Configuration<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+							<li>
+                                <a href="source.html">Application And WebURL<span class="fa arrow"></span></a>
+							</li>
+                            <li>
+                                <a href="rdc.html">RDC & VNC<span class="fa arrow"></span></a>
+							</li>
+                            <li>
+                                <a href="network.html">Network Sources<span class="fa arrow"></span></a>
+							</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="waves-effect waves-dark"><i class="fa fa-sitemap"></i>Management<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+							<li>
+                                <a href="#">User Management<span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="adduser.html">Add User</a>
+                                    </li>
+                                    <li>
+                                        <a href="deleteuser.html">Delete User</a>
+                                    </li>
+                                    <li>
+                                        <a href="changepassword.html">Change Password</a>
+                                    </li>
+								</ul>
+							</li>
+                            <li>
+                                <a href="source.html">Source Management</a>
+                            </li>
+                            <li>
+                                <a href="#">Reason Management</a>
+                            </li>
+                            <li>
+                                <a href="feature.html">Feature Control</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+			</div>
+		</nav>
+        <!-- /. NAV SIDE  -->
+        <div id="page-wrapper">
+			<div class="header"> 
+        		<h1 class="page-header">Server Configuration</h1>
+				<ol class="breadcrumb">
+					<li><a href="#">Home</a></li>
+					<li><a href="active">Server Configuration</a></li>
+				</ol> 
+			</div>
+            <div id="page-inner">         
+                <div class="row">  
+                    <div class="col-md-3 col-sm-12 col-xs-12"></div>               
+                    <div class="col-md-6 col-sm-12 col-xs-12 formdesign">                     
+                        <form>
+                            <div class="form-group">
+                                <label for="ip" class="form-label">Select Caller ID:</label>
+                                <input type="text" id="for" class="form-control"/>
+                                <select  class="form-select" id="ip" name="">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </div>
+                            <div class="button">
+                                <button class="btn btn-success">ADD</button>
+                                <button class="btn btn-danger">DELETE</button>
+                            </div>
+                            <div class="form-group">
+                                <label for="signal" class="form-label">No Signal Text:</label>
+                                <input type="text" id="signal" class="form-control"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="server" class="form-label">Redundent Server:</label>
+                                <input type="text" id="server" class="form-control"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="ip" class="form-label">Log Level:</label>
+                                <select  class="form-select" id="ip" name="">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                                <label for="ip" class="form-label">Minimize on Load Layout :</label>
+                                <select  class="form-select" id="ip" name="">
+                                    <option>True</option>
+                                    <option>False</option>
+                                </select>
+                            </div>
+                            <label for="number">Font Size</label>
+                            <div class="value-button" id="decrease" onclick="decreaseValue()" value="Decrease Value">-</div>     
+                            <input type="number" id="number" value="0" />
+                            <div class="value-button" id="increase" onclick="increaseValue()" value="Increase Value">+</div>
+                            <label for="number">COM Port:</label>
+                            <div class="value-button" id="decrease" onclick="decreaseValue1()" value="Decrease Value">-</div>     
+                            <input type="number" id="number1" value="0" />
+                            <div class="value-button" id="increase" onclick="increaseValue1()" value="Increase Value">+</div>
+                            <div class="form-group">
+                                <label for="location" class="form-label">Snapshot Location:</label>
+                                <input type="text" id="location" class="form-control"/>
+                            </div>
+                            <div class="form-group form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1">Show Message</label>                                
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="path">Recording Path</label>
+                                <input type="text" class="form-control" id="path">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="web">Web Streaming Server</label>
+                                <input type="text" class="form-control" id="web">
+                            </div>
+                            <div class="form-group form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck2">
+                                <label class="form-check-label" for="exampleCheck2">Prompt for Password at EXit</label>                                
+                            </div>
+                            <button class="btn btn-primary" style="margin: 10px 0px 10px 0px;"><a href="#myModal" data-toggle="modal">Configure wall</a></button></br>
+                            <button class="btn btn-success">OK</button>
+                            <div class="modal fade" id="myModal" role="dialog" style="z-index:99999999; width:38%;">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="btn " class="close" data-dismiss="modal">&times;</button>
+                                            <h1>Wall Configuration<h1>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="form1">
+                                                <label for="number">Rows:</label>
+                                                <div class="value-button" id="decrease" onclick="decreaseValue()" value="Decrease Value">-</div>     
+                                                <input type="number" id="number2" value="1" />
+                                                <div class="value-button" id="increase" onclick="increaseValue()" value="Increase Value">+</div></br>
+                                                <label for="number">Columns:</label>
+                                                <div class="value-button" id="decrease" onclick="decreaseValue1()" value="Decrease Value">-</div>     
+                                                <input type="number" id="number3" value="1" />
+                                                <div class="value-button" id="increase" onclick="increaseValue1()" value="Increase Value">+</div></br>
+                                                <button class="btn btn-sucess">OK</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- jQuery Js -->
+    <script src="assets/js/jquery-1.10.2.js"></script>	
+	<!-- Bootstrap Js -->
+    <script src="assets/js/bootstrap.min.js"></script>	
+	<script src="assets/materialize/js/materialize.min.js"></script>	
+    <!-- Metis Menu Js -->
+    <script src="assets/js/jquery.metisMenu.js"></script>
+    <!-- Morris Chart Js -->
+    <script src="assets/js/morris/raphael-2.1.0.min.js"></script>
+    <script src="assets/js/morris/morris.js"></script>
+
+    <!-- Custom Js -->
+    <script src="assets/js/custom-scripts.js"></script>
+    <script>
+        function increaseValue() {
+var value = parseInt(document.getElementById('number2').value, 10);
+value = isNaN(value) ? 1 : value;
+value++;
+document.getElementById('number2').value = value;
+}
+
+function decreaseValue() {
+var value = parseInt(document.getElementById('number2').value, 10);
+value = isNaN(value) ? 1 : value;
+value < 2 ? value = 2 : '';
+value--;
+document.getElementById('number2').value = value;
+}
+function increaseValue1() {
+var value = parseInt(document.getElementById('number3').value, 10);
+value = isNaN(value) ? 1 : value;
+value++;
+document.getElementById('number3').value = value;
+}
+
+function decreaseValue1() {
+var value = parseInt(document.getElementById('number3').value, 10);
+value = isNaN(value) ? 1 : value;
+value < 2 ? value = 2 : '';
+value--;
+document.getElementById('number3').value = value;
+}
+
+    </script>
+ 	</body>
+
+</html>
